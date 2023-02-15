@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('mysql', 'sajid', '{mypassword}', {
+const sequelize = new Sequelize('mysql', 'sajid', process.env.DB_PASSWORD, {
   dialect: 'mssql',
   host: 'techdailybackend.database.windows.net',
   port: '1433',
