@@ -14,7 +14,12 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: ['https://techdaily2022.netlify.app', 'http://localhost:3001', 'https://techdaily2023.netlify.app'],
+    origin: [
+      'https://techdaily2022.netlify.app',
+      'http://localhost:3001',
+      'http://localhost:3000',
+      'https://techdaily2023.netlify.app',
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     preflightContinue: false,
     optionsSuccessStatus: 204,
