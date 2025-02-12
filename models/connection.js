@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-const PostgresDialect = require('@sequelize/postgres').PostgresDialect;
 
 // const sequelize = new Sequelize('mysql', 'sajid', process.env.DB_PASSWORD, {
 //   dialect: 'mssql',
@@ -17,7 +16,8 @@ const PostgresDialect = require('@sequelize/postgres').PostgresDialect;
 //   port: '3306',
 // });
 
-// const sequelize = new Sequelize(`postgresql://postgres:${process.env.DB_PASSWORD}@db.kahxlnzgcmsuthpnenjd.supabase.co:5432/postgres`)
+// const sequelize = new Sequelize(`postgresql://postgres:${process.env.DB_PASSWORD}@db.kahxlnzgcmsuthpnenjd.supabase.co:5432/postgres`);
+const sequelize = new Sequelize(`postgresql://postgres.kahxlnzgcmsuthpnenjd:${process.env.DB_PASSWORD}@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres`);
 
 // const sequelize = new Sequelize(
 //   `postgresql://postgres:${process.env.DB_PASSWORD}@db.kahxlnzgcmsuthpnenjd.supabase.co:5432/postgres`,
@@ -42,6 +42,12 @@ const PostgresDialect = require('@sequelize/postgres').PostgresDialect;
 //   }
 // );
 
-const sequelize = new Sequelize(`postgresql://postgres.kahxlnzgcmsuthpnenjd:${process.env.DB_PASSWORD}@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres`)
+// const sequelize = new Sequelize(
+//   `postgresql://postgres.kahxlnzgcmsuthpnenjd:${process.env.DB_PASSWORD}@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres`,
+//   {
+//     dialect: 'postgres',
+//     dialectModule: pg,
+//   }
+// );
 
 module.exports = sequelize;

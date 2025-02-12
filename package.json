@@ -23,6 +23,8 @@
     "netlify-cli": "^18.0.4",
     "netlify-lambda": "^2.0.16",
     "nodemon": "^2.0.22",
+    "pg": "^8.13.2",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.31.1",
     "serverless-http": "^3.2.0",
     "winston": "^3.8.2",

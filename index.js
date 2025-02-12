@@ -9,7 +9,6 @@ const compression = require('compression');
 const dbConnect = require('./config/dbconnect');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const serverless = require("serverless-http");
 const app = express();
 
 app.use(helmet());
@@ -33,8 +32,8 @@ app.use(express.json());
 app.use(cookieParser());
 dbConnect();
 
-app.use('/.netlify/functions/app/api/v1/stories', storyRouter);
-app.use('/.netlify/functions/app/api/v1/users', userRouter);
+app.use('/api/v1/stories', storyRouter);
+app.use('/api/v1/users', userRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Cannot find ${req.originalUrl} on this server`, 404));
@@ -42,4 +41,4 @@ app.all('*', (req, res, next) => {
 
 app.use(globalErrorHandler);
 
-module.exports.handler = serverless(app);
+module.exports = app;
