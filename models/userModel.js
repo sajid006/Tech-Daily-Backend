@@ -4,8 +4,8 @@ const Sequelize = require('sequelize');
 const users = sequelize.define('users', {
   username: {
     type: Sequelize.STRING,
-    unique: { args: true, msg: 'Username must be unique' },
-    primaryKey: { args: true, msg: 'Username must be unique' },
+    unique: { args: true, msg: 'Username is already taken' },
+    primaryKey: { args: true, msg: 'Username is already taken' },
     validate: {
       is: { args: /^[A-Za-z][A-Za-z0-9_]{4,30}$/, msg: 'Username not acceptable' },
     },
