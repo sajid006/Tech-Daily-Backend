@@ -20,7 +20,7 @@ app.use(
       'http://localhost:3000',
       'https://techdaily2023.netlify.app',
     ],
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     preflightContinue: false,
     optionsSuccessStatus: 204,
     credentials: true,
