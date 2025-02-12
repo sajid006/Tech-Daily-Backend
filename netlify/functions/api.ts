@@ -10,10 +10,9 @@ const userRouter = require('../../routes/userRoutes');
 const AppError = require('../../utils/appError');
 const dbConnect = require('../../config/dbconnect');
 const globalErrorHandler = require('../../utils/ErrorHandler').errorHandler;
-require('../../config/winston');
 
-const router = express.Router();
 const app = express();
+const router = express.Router();
 
 app.use(helmet());
 app.use(
